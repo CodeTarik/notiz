@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" sizes="180x180" href="./img/notice.png">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300&display=swap" rel="stylesheet">
+
+    <title>Notizblock</title>
+
+    
+</head>
+
+<body onload="includeHTML()">
+
+    <header>
+    <div w3-include-html= "templates/header.html"></div>
+    </header>
+
+        
+    <div class="enter">
+        <div class="first">
+            <form>
+            <textarea id="title" type="text" placeholder="Titel" cols="30" required></textarea>  
+            <textarea placeholder="Notiz schreiben.." id="notice" cols="30" rows="2" required></textarea>
+            <button onclick="addMyPost()">Erstellen</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="menu" class="overlay">
+        <a href="#">Notizen</a>
+        <a href="#">Papierkorb</a>
+        
+        <button onclick="closeMenu()" class="close-overlay">Schließen</button>
+       
+    </div>
+
+    <!--Durch Javascript wird hier ein HTML-Code generiert! -->
+    <div id="myposts">
+    </div> 
+    
+    
+        
+</body>
+</html>
